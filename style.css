@@ -1,22 +1,277 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
-.left{
+
+.left-nav-header {
     display: flex;
     gap: 1.3rem;
 
 }
-.left img{
+
+.left-nav-header img {
     width: 2rem;
 }
-.nav-header{
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   padding: 1rem 0rem;
+
+.left-nav-header p {
+    color: rgb(88, 88, 88);
 }
-.Qubani-btn{
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 12rem;
+    background: rgb(233, 233, 233);
+}
+
+.right-btn-nav-header {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.Qubani-btn {
+    padding: 0.5rem 1rem;
+    background: rgb(59 130 246);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.English-btn {
+    padding: 0.5rem 1rem;
+    color: black;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 0.3rem;
+}
+
+@media(max-width:1200px) {
+    .nav-header {
+        padding: 1rem 6rem;
+    }
+}
+
+@media(max-width:789px) {
+    .nav-header {
+        padding: 1rem 2rem;
+    }
+}
+
+@media(max-width:682px) {
+    .nav-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+/*Nav-header-complete  */
+
+
+.nav-bar {
+    display: flex;
+    padding: 1rem 12rem;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: rgba(0,0,0,0.1); */
+
+}
+
+.nav-bar .logo img {
+    width: 200px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: gray;
+    font-size: .9rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+@media (max-width:992px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon i {
+        font-size: 1.5rem;
+        border: 1px solid gainsboro;
+        padding: 0.5rem 0.8rem;
+        border-radius: 0.5rem;
+    }
+}
+
+@media (max-width:1400px) {
+    .nav-bar {
+        padding: 1rem 6rem;
+
+    }
+}
+
+@media (max-width:1170px) {
+    .nav-bar {
+        padding: 1rem 3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8;
+    }
+}
+
+/* End of NAv bar */
+main {
+    padding: 1rem 12rem;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+
+}
+.green-color{
+    color: #8dc63f;
+}
+.hero-img img{
+    width: 70%;
+}
+.content-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.content-section h1{
+   font-size: 38px;
+   font-weight: 600;
+   line-height: 3.1rem;
+}
+.content-section h3{
+    font-size: 24px;
+   font-weight: 600;
     
 }
+.Explore-btn{
+    padding: 1rem 3rem ;
+    color: rgb(54, 54, 54);
+    margin-top: 0.5rem;
+}
+.arrow-icon{
+    padding: 0rem 0.5rem;
+}
+@media (max-width:1200px){
+    .hero-img img{
+        width: 500px;
+    }
+     main{
+        padding: 1rem 6rem;
+     }
+}
+@media (max-width:992px){
+    .content-section{
+        padding: 1rem;
+    }
+    .hero-img img{
+        width: 400px;
+    }
+    .content-section h1{
+        font-size: 30px;
+        line-height: 2rem;
+    }
+     main{
+        padding: 1rem 3rem;
+     }
+}
+@media (max-width:768px){
+    .hero-img img{
+        width: 300px;
+    }
+   
+
+}
+@media (max-width:576px){
+    .hero-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero-img {
+        display: none;
+    }
+   
+
+}
+
+/* hero End */
+.RS input{
+   padding: 0.8rem;
+   border: 1px solid #424242;
+}
+.RS{
+    display: flex;
+    border-radius: 1rem;
+
+}
+.Donation-Categories{
+    background-color: rgba(182,239,73,.2);
+    padding: 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 1rem;
+}
+.General{
+    padding: 0.8rem .8rem;
+    background-color: #424242;
+    color: white;
+    border: 1px solid #424242;
+
+}
+.Donation-Categories  button{
+    padding: 1rem 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.Donation-Categories  button:hover{
+   transform: scale(1.1);
+   transition-duration: 0.5s;
+   background-color: gray;
+   color: white;
+} 
+
+@media (max-width:992px){
+    .Donation-Categories{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .RS{
+        grid-column: 1/4;
+      margin: auto;
+    }
+}
+/* @media (max-width:992px){
+    .Donation-Categories{
+        grid-template-columns: repeat(3,1fr);
+    }
+} */
